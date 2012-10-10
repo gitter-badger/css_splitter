@@ -4,7 +4,7 @@ module CssSplitter
       original_sources = sources.dup
 
       options = sources.extract_options!
-      sources.collect!{ |source| "#{source}_split2" }
+      sources.collect!{ |source| head, tail = source.split('.'); "#{head}_split2.#{Array.wrap(tail).join('.')}" }
       sources << options
 
       [
