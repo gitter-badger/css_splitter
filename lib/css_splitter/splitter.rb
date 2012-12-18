@@ -27,7 +27,7 @@ module CssSplitter
           selectors_count += rule_selectors_count
           return index if selectors_count > max_selectors
         end
-        rules.length -1
+        rules.length - 1
       end
     end
 
