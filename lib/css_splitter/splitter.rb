@@ -1,3 +1,5 @@
+require "sass"
+
 module CssSplitter
 
   class Splitter
@@ -6,7 +8,9 @@ module CssSplitter
 
     class << self
       def split(data, part=1, max_selectors=MAX_SELECTORS_DEFAULT)
-        rules = StringIO.new(data).readlines('}')
+        engine = Sass::Engine.new(data, syntax: :scss)
+        rules = engine.to_tree.children.reject{|node| node.is_a?(Sass::Tree::CommentNode)}
+                                       .map{|node| node.to_scss}
         return if rules.first.nil?
         charset_statement, rules[0] = rules.first.partition(/^\@charset[^;]+;/)[1,2]
         output = charset_statement
