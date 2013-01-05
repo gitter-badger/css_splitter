@@ -4,7 +4,7 @@ module CssSplitter
 
   class Splitter
 
-    MAX_SELECTORS_DEFAULT = 3000
+    MAX_SELECTORS_DEFAULT = 2500
 
     class << self
       def split(data, part=1, max_selectors=MAX_SELECTORS_DEFAULT)
