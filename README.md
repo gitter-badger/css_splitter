@@ -1,5 +1,7 @@
 # CssSplitter
 
+[![Join the chat at https://gitter.im/ahastudio/css_splitter](https://badges.gitter.im/ahastudio/css_splitter.svg)](https://gitter.im/ahastudio/css_splitter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Status
 
 Work in progress of turning this https://gist.github.com/2398394 into a gem.
